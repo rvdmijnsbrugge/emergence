@@ -1,10 +1,8 @@
 <style>
   /*
 
-  © 2026 Rembrant Van der Mijnsbrugge.
-  All rights reserved.
-
-  https://glasscss.com
+  © 2026 Rembrant Van der Mijnsbrugge
+  All rights reserved
 
 */
 
@@ -93,40 +91,7 @@ body > header nav [popovertarget="menu"] {
 body > header nav [popovertarget="cart"] {
   grid-column: 5;
 }
-
-
-body > footer {
-  padding: calc(21px * 4) calc(21px * 1);
-  grid-template-columns: repeat(2, 1fr);
-  gap: calc(21px * 2) calc(21px * 1);
-  align-items: start;
-  display: grid;
-}
-body > footer nav {
-  gap: calc(21px * 1);
-  display: grid;
-}
-body > footer nav h4 {
-  font-weight: inherit;
-  font-size: inherit;
-  margin: 0;
-}
-body > footer nav a {
-  text-decoration-color: rgba(0,0,0,0);
-  text-underline-offset: 2px;
-  color: inherit;
-}
-body > footer nav a:is(:hover, :focus) {
-  text-decoration-color: rgba(0,0,0,0.25);
-}
-body > footer nav ul {
-  gap: calc(21px * 0.5);
-  list-style: none;
-  display: grid;
-  padding: 0;
-  margin: 0;
-}
-
+  
 
 figure {
   padding: 0 21px;
@@ -410,85 +375,6 @@ aside footer figure {
   margin: 0 calc(21px * 1);
   aspect-ratio: 16/9;
 }
-
-
-/*
-
-  © 2026 Rembrant Van der Mijnsbrugge.
-  All rights reserved.
-
-  https://www.guggenheim.org/wp-content/uploads/2013/11/rothko_black_gray-1024.jpg
-
-*/
-
-.frame {
-  width: calc(100vw - 21px * 2);
-  margin: 0 calc(21px * 1);
-  aspect-ratio: 8/5;
-  overflow: hidden;
-  display: grid;
-}
-.background {
-  background: rgba(240, 238, 233, 1);
-  grid-area: 1 / 1;
-  z-index: 0;
-}
-.noise {
-  background: rgba(0, 0, 0, 0) url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><filter id='noiseFilter'><feTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noiseFilter)'/></svg>") repeat 0 0 / 200px 200px;
-  mix-blend-mode: multiply;
-  filter: grayscale(0);
-  grid-area: 1 / 1;
-  z-index: 1;
-}
-.base {
-  background: rgba(0, 0, 0, 0.875);
-  mix-blend-mode: multiply;
-  grid-area: 1 / 1;
-  z-index: 2;
-}
-.bottom {
-  background: linear-gradient(
-    rgba(89, 86, 75, 0),
-    rgba(89, 86, 75, 0),
-    rgba(89, 86, 75, 0.375),
-    rgba(89, 86, 75, 0.25)
-  );
-  mix-blend-mode: difference;
-  filter: blur(2.5vh);
-  grid-area: 1 / 1;
-  z-index: 3;
-}
-.top {
-  background: linear-gradient(
-    rgba(52, 50, 45, 0),
-    rgba(52, 50, 45, 0),
-    rgba(52, 50, 45, 0),
-    rgba(52, 50, 45, 0.125)
-  );
-  mix-blend-mode: difference;
-  filter: blur(5vh);
-  grid-area: 1 / 1;
-  z-index: 4;
-}
-.signature {
-  padding: calc(21px * 0.75) calc(21px * 0.75);
-  color: rgba(0, 0, 0, 0.375);
-  mix-blend-mode: multiply;
-  place-content: end end;
-  grid-area: 1 / 1;
-  display: grid;
-  z-index: 5;
-}
-
-
-.colophon {
-  padding: calc(21px * 1) calc(21px * 1);
-  grid-template-columns: 1fr auto;
-  color: rgba(0, 0, 0, 0.375);
-  display: grid;
-}
-
-
 
 .collections {
   grid-template-columns: repeat(2, 1fr);
@@ -866,6 +752,16 @@ aside footer figure {
 </main>
 
 <footer>
+  <form>
+    <h4>Newsletter</h4>
+    <p>Sign up for 10% off your first order.</p>
+    <fieldset>
+      <input type="email" placeholder="Email"/>
+      <button type="submit">
+        &rarr;
+      </button>
+    </fieldset>
+  </form>
   <nav>
     <h4>
       <a href="#">
@@ -938,26 +834,10 @@ aside footer figure {
       </li>
     </ul>
   </nav>
-</footer>
-
-<div class="frame">
-  <div class="background"></div>
-  <div class="noise"></div>
-  <div class="base"></div>
-  <div class="bottom"></div>
-  <div class="top"></div>
-  <!--   
-  <em class="signature">
-    Rembrant Van der Mijnsbrugge
-  </em>
-  -->
-</div>
-
-<div class="colophon">
-  <span class="copyright">
+  <small>
     &copy; 2026 Mote
-  </span>
-  <a class="credit" href="#">
-    Site by Mote
-  </a>
-</div>
+    <a href="https://mote.agency" target="_blank">
+      Site by Mote
+    </a>
+  </small>
+</footer>
