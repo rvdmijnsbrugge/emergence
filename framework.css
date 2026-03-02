@@ -111,7 +111,7 @@ body > footer form button:hover {
 }
 
 body > footer nav {
-  gap: calc(var(--leading) * 0.5);
+  gap: calc(var(--leading) * 1);
   display: grid;
 }
 body > footer nav ul {
